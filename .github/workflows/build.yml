@@ -1,8 +1,6 @@
-name: .NET
+name: Build
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -22,7 +20,3 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build -c Release --no-restore
-    - name: Pack
-      run: dotnet pack -c Release
-    - name: Publish
-      run: dotnet nuget push Realtorist.GeoCoding.Implementations.Here/bin/Release/*.nupkg --source github --api-key $NUGET_PAT

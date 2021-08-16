@@ -1,0 +1,26 @@
+name: Build & Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_USER: ${{ secrets.SECRET_GITHUB_USER }}
+      NUGET_PAT: ${{ secrets.SECRET_NUGET_PAT }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Release --no-restore
+    - name: Pack
+      run: dotnet pack -c Release
+    - name: Publish
+      run: dotnet nuget push Realtorist.GeoCoding.Implementations.Here/bin/Release/*.nupkg --source github --api-key $NUGET_PAT
