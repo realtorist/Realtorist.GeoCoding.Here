@@ -5,7 +5,7 @@ using Realtorist.GeoCoding.Abstractions;
 using Realtorist.GeoCoding.Implementations.Here.Models;
 using Realtorist.Models.Helpers;
 using Realtorist.Models.Listings.Details;
-using Realtorist.Models.Models;
+using Realtorist.Models.Geo;
 using Realtorist.Models.Settings;
 using Realtorist.Services.Abstractions.Cache;
 using System;

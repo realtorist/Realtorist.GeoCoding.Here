@@ -3,7 +3,7 @@ using Realtorist.DataAccess.Abstractions;
 using Realtorist.GeoCoding.Abstractions;
 using Realtorist.Models.Helpers;
 using Realtorist.Models.Listings.Details;
-using Realtorist.Models.Models;
+using Realtorist.Models.Geo;
 using Realtorist.Models.Settings;
 using System;
 using System.Collections.Generic;

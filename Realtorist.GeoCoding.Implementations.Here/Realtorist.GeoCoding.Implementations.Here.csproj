@@ -3,19 +3,19 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Realtorist.GeoCoding.Implementations.Here</PackageId>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Dmytro Bondarchuk</Authors>
     <Title>Realtorist.GeoCoding.Implementations.Here</Title>
     <Description>Data access abstractions for the Realtorist framework</Description>
     <RepositoryUrl>https://github.com/realtorist/Realtorist.GeoCoding.Implementations.Here</RepositoryUrl>
-    <ReleaseNotes>Initial publish</ReleaseNotes>
+    <ReleaseNotes>Updated libs</ReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Realtorist.Models" Version="0.0.1" />
-    <PackageReference Include="Realtorist.DataAccess.Abstractions" Version="0.0.1" />
-    <PackageReference Include="Realtorist.GeoCoding.Abstractions" Version="0.0.1" />
-    <PackageReference Include="Realtorist.Services.Abstractions" Version="0.0.1" />
+    <PackageReference Include="Realtorist.Models" Version="0.0.2" />
+    <PackageReference Include="Realtorist.DataAccess.Abstractions" Version="0.0.2" />
+    <PackageReference Include="Realtorist.GeoCoding.Abstractions" Version="0.0.2" />
+    <PackageReference Include="Realtorist.Services.Abstractions" Version="0.0.2" />
   </ItemGroup>
 
   <ItemGroup>
