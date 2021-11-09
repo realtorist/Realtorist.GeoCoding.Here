@@ -20,7 +20,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build -c Release --no-restore
-    - name: Pack
-      run: dotnet pack -c Release
     - name: Publish
-      run: dotnet nuget push Realtorist.GeoCoding.Implementations.Here/bin/Release/*.nupkg --source github --api-key $NUGET_PAT
+      run: dotnet publish -c Release --no-restore --no-build --output publish
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Realtorist.GeoCoding.Implementations.Here
+        path: publish/
